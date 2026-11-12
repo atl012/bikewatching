@@ -1,0 +1,64 @@
+body {
+  font: 100%/1.5 system-ui, sans-serif;
+  display: flex;
+  flex-flow: column;
+  max-width: 80em;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1em;
+}
+
+/* Step 5.1: header with the time slider on the right */
+header {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+
+  h1 {
+    margin: 0;
+  }
+
+  label {
+    margin-left: auto;
+  }
+
+  /* Own line, so the slider doesn't jump as the time text changes */
+  time,
+  em {
+    display: block;
+    text-align: right;
+  }
+
+  em {
+    color: gray;
+    font-style: italic;
+  }
+}
+
+/* Step 6.2: legend (Design 2: separate swatches and labels) */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-block: 1em;
+
+  > span {
+    font-weight: bold;
+    color: gray;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+
+    &::before {
+      content: '';
+      width: 1em;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: var(--color);
+    }
+  }
+}
